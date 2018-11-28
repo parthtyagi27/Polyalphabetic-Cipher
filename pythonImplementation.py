@@ -23,11 +23,11 @@ def encrypt(key, text):
         position += keyArray[counter]
         if position > len(alphabet):
             position = position % len(alphabet)
-        print("Shifting " + str(position) + " with " + str(keyArray[counter]) + " to " + str(position))
+        #print("Shifting " + str(position) + " with " + str(keyArray[counter]) + " to " + str(position))
         counter += 1
         encryptedString += alphabet[position]
         
-    print(keyArray)
+    #print(keyArray)
     return encryptedString;
 
 def decrypt(key, text):
@@ -45,13 +45,13 @@ def decrypt(key, text):
         position = position - keyArray[counter]
         if position < 0:
             position = position + len(alphabet)
-        print("Shifting " + str(position) + " with " + str(keyArray[counter]) + " to " + str(position))
+        #print("Shifting " + str(position) + " with " + str(keyArray[counter]) + " to " + str(position))
         counter += 1
         decryptedString += alphabet[position]
         
-    print(keyArray)
+    #print(keyArray)
     return decryptedString;
 
 
-print(encrypt("hey", "yeah"))
-print(decrypt("hey", "fiyo"))
+print(encrypt("cipher", "encryptedText"))
+print(decrypt(encrypt("cipher", "encryptedText"))
